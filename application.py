@@ -18,7 +18,7 @@ class DojoShare(QtWidgets.QMainWindow):
         self.server_thread = Thread(target=self.start_server)
 
     def start_server(self):
-        flask_app.run(debug=False, port=8080, host=self.ui.comboBox.currentText())
+        flask_app.run(debug=False, port=80, host=self.ui.comboBox.currentText())
         
     def buttonClicked(self):
         self.server_thread.start()
