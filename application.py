@@ -1,5 +1,4 @@
 from PyQt5 import QtWidgets, QtCore
-# Импортируем наш файл
 from window import Ui_MainWindow
 from NetworkUtil import get_interfaces_addresses
 from server import flask_app
@@ -19,7 +18,7 @@ class DojoShare(QtWidgets.QMainWindow):
         self.server_thread = Thread(target=self.start_server)
 
     def start_server(self):
-        flask_app.run(debug=True, port=80, host=self.ui.comboBox.currentText())
+        flask_app.run(debug=False, port=8080, host=self.ui.comboBox.currentText())
         
     def buttonClicked(self):
         self.server_thread.start()
