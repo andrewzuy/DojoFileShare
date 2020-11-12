@@ -22,7 +22,7 @@ class DojoShare(QtWidgets.QMainWindow):
         
     def buttonClicked(self):
         self.server_thread.start()
-        self.ui.pushButton.setText("Web Servar started")
+        self.ui.pushButton.setText("Sarvar started")
         self.ui.pushButton.setEnabled(False)
         self.ui.comboBox.setEnabled(False)
         self.ui.label_2.setText("<a href='http://"+self.ui.comboBox.currentText()+"'>http://"+self.ui.comboBox.currentText()+"</a>")
