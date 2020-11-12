@@ -1,1 +1,1 @@
-start pythonw application.py
+start python application.py
